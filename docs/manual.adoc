@@ -1,0 +1,72 @@
+= Work in progress...
+
+# API status
+
+Currently it's marked as beta. It doesn't mean it's unstable.
+It's heavily tested and works as expected,
+however API is most probably going to change.
+If you follow our guides and encapsulate the usage of our API, any changes
+should affect only one of your classes.
+
+# Objectives
+
+Integration jTest aims to allow
+easy to set-up,
+ debuggable, fast, hassle-free, local integration tests on jvm.
+
+# Basics
+
+
+
+### How does Integration jTest work?
+
+
+
+Integration jTest offers a few levels of API:
+
+. Low level: access to raw lifecycle methods. This API allows you to define
+and run test environments and compose and group those definitions into higher level
+functional blocks and override some parts of existing blocks.
+You may use it to define almost any integration
+testing scenario, although sometimes it won't be trivial.
+
+. Environment runner. Lets you start and stop environments. Currently on docker
+is supported. Support for docker-compose and vagrant coming soon.
+
+. Cleanup operation. Lets prepare a specific application to interact with your tests
+and testing framework. Currently only Postgres is supported. Support for other
+relational databases, NoSQLs and other kinds of storage comming soon.
+
+. Configuration loader. Lets you configure details of the integration
+tests running on your local machine. In case you don't like the default ones.
+
+. Full postgres environment. Group other APIs into a signle full-blown Postgres
+testing environments. Other environments coming soon.
+
+# Out-of-the-box support
+
+## Yaml config
+
+## Docker
+
+## Postgres
+
+
+
+There is out-of-the-box support for Postgres so the testing setup will
+be very short.
+
+# Code samples
+### Spring boot, flyway, jdbcTemplate
+
+### Spring boot, flyway, hibernate
+### Spring boot, liquibase, hibernate
+### Pojo repository, flyway, jdbcTemplate
+
+
+# DynamoDB
+
+There is no out-of-the-box support for DynamoDB (yet). Let's see how you
+can test it.
+
+
